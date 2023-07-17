@@ -232,7 +232,7 @@ public class ResourceCentre {
 			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())				
 					&& camcorderList.get(i).getIsAvailable() == true) {
 				
-				camcorderList.get(i).setIsAvailable(false);
+				camcorderList.get(i).showAvailability(false);
 				camcorderList.get(i).setDueDate(dueDate);
 				
 				isLoaned = true;
@@ -266,7 +266,7 @@ public class ResourceCentre {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
 					&& chromebookList.get(i).getIsAvailable() == true) {
 				
-				chromebookList.get(i).setIsAvailable(false);
+				chromebookList.get(i).showAvailability(false);
 				chromebookList.get(i).setDueDate(dueDate);
 				
 				isLoaned = true;
@@ -300,7 +300,7 @@ public class ResourceCentre {
 
 			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())
 					&& camcorderList.get(i).getIsAvailable() == false) {
-				camcorderList.get(i).setIsAvailable(true);
+				camcorderList.get(i).showAvailability(true);
 				camcorderList.get(i).setDueDate("");
 				isReturned = true;
 				
@@ -332,7 +332,7 @@ public class ResourceCentre {
 
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
 					&& chromebookList.get(i).getIsAvailable() == false) {
-				chromebookList.get(i).setIsAvailable(true);
+				chromebookList.get(i).showAvailability(true);
 				chromebookList.get(i).setDueDate("");
 				isReturned = true;
 				
